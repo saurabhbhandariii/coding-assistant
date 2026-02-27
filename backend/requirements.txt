@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+requests
+python-dotenv
+openai
+pytest
+pytest-mock
+beautifulsoup4
+python-multipart

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "AI Coding Mentor",
+  "version": "1.0",
+  "description": "AI-powered roadmap + hints sidebar for LeetCode and YouTube.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "*://*.leetcode.com/*",
+    "*://*.youtube.com/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.leetcode.com/*", "*://*.youtube.com/*"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
